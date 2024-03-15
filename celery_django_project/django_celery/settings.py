@@ -126,9 +126,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Celery configurations
 
-CELERY_BROKER_URL = 'amqp://horror:pass123@127.0.0.1:5672'
-CELERY_BACKEND_URL = 'redis://127.0.0.1:6379/1'
+CELERY_BROKER_URL='amqp://horror:pass123@127.0.0.1:5672' # exported
+CELERY_BACKEND_URL='redis://127.0.0.1:6379/1' # exported
 CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
+
