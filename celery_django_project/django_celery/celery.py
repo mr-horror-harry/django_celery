@@ -8,9 +8,6 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_celery.settings')
 
 app = Celery('django_celery')
 
-# app.conf.enable_utc = False
-# app.conf.update(timezone = 'Asia/Kolkata')
-
 app.config_from_object('django.conf:settings', namespace='CELERY_')
 
 app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
